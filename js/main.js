@@ -56,6 +56,16 @@ btAjouter.addEventListener('click', () => {
     txtArticle.focus();
 });
 
+// Ecoute les frappes clavier sur le champ texte
+txtArticle.addEventListener('keypress', function (event) {
+    // Affiche le code de la touche clavier dans la console
+    console.log(event.key);
+    // Si la touche est "Enter"
+    if(event.key === 'Enter') {
+        btAjouter.click(); // Simule le clic du bouton Ajouter
+    }
+});
+
 
 
 
